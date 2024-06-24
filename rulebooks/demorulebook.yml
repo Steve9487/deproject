@@ -1,5 +1,5 @@
 - name: test
-  hosts: 10.10.10.149
+  hosts: localhost
   sources:
     - ansible.eda.kafka:
        host: 10.10.10.149
