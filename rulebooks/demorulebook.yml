@@ -8,6 +8,7 @@
   rules:
     - name: Incident
       condition: event.message == "Bad"
+      # {"message":"Bad"}
       action:
        run_job_template:
          name: EDA_Demo
