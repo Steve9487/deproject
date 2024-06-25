@@ -1,0 +1,13 @@
+- name: test
+  hosts: localhost
+  sources:
+    - ansible.eda.url_check:
+        urls:
+          - http://10.10.10.149
+        delay: 5
+  rules:
+    - name: Restart httpd
+      condition: event.url_check.status == "down"
+      action:
+        run_job_template:
+          name: restart_httpd
